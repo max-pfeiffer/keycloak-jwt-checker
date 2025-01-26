@@ -1,9 +1,12 @@
+"""Tests for command line interface."""
+
 from click.testing import CliRunner, Result
 
 from keycloak_jwt_checker import cli
 
 
 def test_cli(cli_runner: CliRunner) -> None:
+    """Test the command line interface."""
     result: Result = cli_runner.invoke(
         cli,
         args=[
@@ -22,4 +25,3 @@ def test_cli(cli_runner: CliRunner) -> None:
         ],
     )
     assert result.exit_code == 0
-
