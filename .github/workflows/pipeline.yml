@@ -16,3 +16,17 @@ jobs:
       - name: Run ruff
         run: |
           poetry run pre-commit run -a 
+
+  run-tests:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Set up Python environment
+        uses: ./.github/actions/setup-environment
+      - name: Install dependencies
+        run: |
+          poetry install --no-interaction --no-root
+      - name: Run ruff
+        run: |
+          poetry run pytest 
