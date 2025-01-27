@@ -13,11 +13,31 @@ jobs:
       - name: Install dependencies
         run: |
           poetry install --no-interaction --no-root
-      - name: Run ruff
+      - name: Run pre-commit checks
         run: |
           poetry run pre-commit run -a 
 
   run-tests:
+    needs:
+      - code-quality
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Set up Python environment
+        uses: ./.github/actions/setup-environment
+      - name: Install dependencies
+        run: |
+          poetry install --no-interaction --no-root
+      - name: Run pytest
+        run: |
+          poetry run pytest 
+
+  publish-all-images:
+    needs:
+      - code-quality
+      - run-tests
+    if: startsWith(github.ref, 'refs/tags/')
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout Repository
@@ -28,5 +48,7 @@ jobs:
         run: |
           poetry install --no-interaction --no-root
       - name: Run ruff
+        env:
+          POETRY_PYPI_TOKEN_KEYCLOAK_JWT_CHECKER: ${{ secrets.POETRY_PYPI_TOKEN_KEYCLOAK_JWT_CHECKER }}
         run: |
-          poetry run pytest 
+          poetry publish --build

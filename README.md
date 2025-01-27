@@ -7,6 +7,11 @@ in JWTs. You can see quickly if they contain the values you need for your use ca
 The CLI tool takes the credentials of the client you configured in Keycloak and uses some user's credentials to issue
 tokens for that user using OIDC endpoints. It then decodes the JWT and displays its claim content on stdout.
 
+## Install
+```shell
+pip install keycloak-jwt-checker
+```
+
 ## Usage
 ```shell
 $ keycloak-jwt-checker --help
