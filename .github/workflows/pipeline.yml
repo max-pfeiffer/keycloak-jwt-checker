@@ -54,6 +54,6 @@ jobs:
           poetry install --no-interaction --no-root
       - name: Run ruff
         env:
-          POETRY_PYPI_TOKEN_KEYCLOAK_JWT_CHECKER: ${{ secrets.POETRY_PYPI_TOKEN_KEYCLOAK_JWT_CHECKER }}
+          POETRY_PYPI_TOKEN_PYPI: ${{ secrets.POETRY_PYPI_TOKEN_PYPI }}
         run: |
           poetry publish --build
