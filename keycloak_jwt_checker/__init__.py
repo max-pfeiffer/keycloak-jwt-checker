@@ -38,19 +38,19 @@ from keycloak import KeycloakOpenID
     "--username",
     envvar="KEYCLOAK_JWT_CHECKER_USERNAME",
     required=True,
-    help="Username",
+    help="Username of a Keycloak user you configured for this client",
 )
 @click.option(
     "--password",
     envvar="KEYCLOAK_JWT_CHECKER_PASSWORD",
     required=True,
-    help="Password",
+    help="Password of a Keycloak user you configured for this client",
 )
 @click.option(
     "--skip-tls-verification",
     envvar="KEYCLOAK_JWT_CHECKER_SKIP_TLS_VERIFICATION",
     flag_value=True,
-    help="Password",
+    help="Set this flag if the TLS verification should be skipped on OIDC endpoints",
 )
 def cli(
     server_url: str,
@@ -61,11 +61,11 @@ def cli(
     password: str,
     skip_tls_verification: bool,
 ) -> None:
-    """Command line interface (CLI).
+    """Keycloak JWT Checker.
 
-    CLI provides common operations for configuring and running the application.
+    A little tool for debugging claims contained in JSON Web Tokens (JWT) issued by
+    Keycloak confidential clients.
 
-    Run 'irrigation-pi COMMAND --help' for more information about commands and usage.
     \f
 
     :return:
