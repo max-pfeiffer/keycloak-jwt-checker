@@ -26,6 +26,8 @@ pre-commit = "^4.1.0"
 ruff = "^0.9.3"
 pytest = "^8.3.4"
 testcontainers = "^4.9.1"
+coverage = "^7.6.10"
+pytest-cov = "^6.0.0"
 
 [tool.poetry.scripts]
 keycloak-jwt-checker = 'keycloak_jwt_checker:cli'
