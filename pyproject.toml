@@ -1,7 +1,7 @@
 [project]
 name = "keycloak-jwt-checker"
-version = "0.1.0"
-description = ""
+version = "1.0.1"
+description = "A little tool for debugging claims contained in JSON Web Tokens (JWT) issued by Keycloak confidential clients"
 authors = [
     {name = "Max Pfeiffer",email = "max@maxpfeiffer.ch"}
 ]
@@ -9,10 +9,13 @@ license = {text = "MIT"}
 readme = "README.md"
 requires-python = ">=3.12,<4.0"
 dependencies = [
-    "python-keycloak (>=5.1.1,<6.0.0)",
+    "python-keycloak (>=5.1.2,<6.0.0)",
     "click (>=8.1.8,<9.0.0)",
     "pyjwt (>=2.10.1,<3.0.0)"
 ]
+
+[project.urls]
+homepage = "https://github.com/max-pfeiffer/keycloak-jwt-checker"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
