@@ -4,13 +4,16 @@
 ![pipeline workflow](https://github.com/max-pfeiffer/keycloak-jwt-checker/actions/workflows/pipeline.yml/badge.svg)
 
 # Keycloak JWT Checker
-A little tool for debugging claims contained in JSON Web Tokens (JWT) issued by Keycloak confidential clients.
+A little CLI tool for debugging claims contained in JSON Web Tokens (JWT) issued by Keycloak confidential clients.
 
 Keycloak configuration can be quite complex. So I found it useful to have a tool to look at the claims contained
 in JWTs. You can see quickly if they contain the values you need for your use case.
 
 The CLI tool takes the credentials of the client you configured in Keycloak and uses some user's credentials to issue
-tokens for that user using OIDC endpoints. It then decodes the JWT and displays its claim content on stdout.
+tokens for that user using OIDC endpoints. It then decodes the JWTs and prints its claim contents on stdout:
+* access token
+* id token
+* refresh token
 
 ## Install
 ```shell
