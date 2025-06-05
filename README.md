@@ -2,6 +2,7 @@
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![codecov](https://codecov.io/gh/max-pfeiffer/keycloak-jwt-checker/graph/badge.svg?token=Cqp6pn58fB)](https://codecov.io/gh/max-pfeiffer/keycloak-jwt-checker)
 ![pipeline workflow](https://github.com/max-pfeiffer/keycloak-jwt-checker/actions/workflows/pipeline.yml/badge.svg)
+![PyPI - Version](https://img.shields.io/pypi/v/keycloak-jwt-checker)
 
 # Keycloak JWT Checker
 A little CLI tool for debugging claims contained in JSON Web Tokens (JWT) issued by Keycloak confidential clients.
