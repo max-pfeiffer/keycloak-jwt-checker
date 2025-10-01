@@ -23,7 +23,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "4.2.0"
-ruff = "0.12.11"
+ruff = "0.13.2"
 pytest = "8.4.0"
 testcontainers = "4.10.0"
 coverage = "7.8.2"
