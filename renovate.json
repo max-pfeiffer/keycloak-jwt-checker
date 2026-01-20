@@ -14,8 +14,8 @@
       "automerge": false
     }
   ],
-  "automergeType": "pr",
-  "platformAutomerge": true,
+  "automergeType": "branch",
+  "platformAutomerge": false,
   "rebaseWhen": "behind-base-branch",
   "prCreation": "immediate",
   "dependencyDashboard": false,
