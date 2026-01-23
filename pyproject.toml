@@ -27,7 +27,7 @@ ruff = "0.14.14"
 pytest = "9.0.2"
 testcontainers = "4.14.0"
 coverage = "7.13.1"
-pytest-cov = "6.3.0"
+pytest-cov = "7.0.0"
 
 [tool.poetry.scripts]
 keycloak-jwt-checker = 'keycloak_jwt_checker:cli'
