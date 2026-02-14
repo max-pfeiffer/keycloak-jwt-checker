@@ -813,14 +813,14 @@ cli = ["click (>=5.0)"]
 
 [[package]]
 name = "python-keycloak"
-version = "7.0.3"
+version = "7.1.0"
 description = "python-keycloak is a Python package providing access to the Keycloak API."
 optional = false
 python-versions = "<4,>=3.10"
 groups = ["main"]
 files = [
-    {file = "python_keycloak-7.0.3-py3-none-any.whl", hash = "sha256:08de2c53f742360ed228e17f812a49964c5c52dcaf2439c3a6a1ab28e287cdd6"},
-    {file = "python_keycloak-7.0.3.tar.gz", hash = "sha256:13e5ac449acf5334d62550895bfcd2c08d60c8e22f61a6512a6ad9c844cf9f73"},
+    {file = "python_keycloak-7.1.0-py3-none-any.whl", hash = "sha256:f5bd92e8c436731db6a661db8c39d2f893caa18bd984bf18b383f14a0d3bfcc8"},
+    {file = "python_keycloak-7.1.0.tar.gz", hash = "sha256:6b192c0a3e25a0bb9efbed13a09fb60e07527b4eb087d964a81270a2681cef37"},
 ]
 
 [package.dependencies]
@@ -1195,4 +1195,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.12,<4.0"
-content-hash = "47d8d76f0a70e2faf37f6894389efd684f5ee0987b1ee3f1b229e62debf7224e"
+content-hash = "a3506936e3a4c7737c01f4551aa72ee3a67e78a9ab6e970ee19ef088060e770c"
