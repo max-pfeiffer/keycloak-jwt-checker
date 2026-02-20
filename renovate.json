@@ -3,6 +3,7 @@
   "extends": [
     "config:recommended"
   ],
+  "schedule": ["* * * * 4"],
   "enabledManagers": ["poetry"],
   "packageRules": [
     {
